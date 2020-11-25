@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>mcqcreater.lk</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/mcq_icon.png" type="image/x-icon">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body background="images/bgicon.jpg">
+
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <input class="left" type="text" placeholder="Search.." name="search">
+      <button class="button" id="myBtn" onclick="myFunction() type="submit" >Search</button>
+</div>
+
+
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+<!-- _____________________________________________________________________________________________ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
